@@ -4,6 +4,8 @@
 - [更换在ubuntu系统上更换Rstudio初始化调用的R](#更改调用的R)
 - [使用micromamba在ubuntu系统上管理R环境](#micromamba管理R环境)
 
+-----------
+
 ## 更改调用的R
 
 在linux桌面系统ubuntu希望更改**Rstudio**调用的R，在尽量不直接修改`/usr/local/bin/R`的基础上，可以使用**miniconda**或者**micromamba**先新建R环境，配置好了以后进行更改。
