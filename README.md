@@ -50,3 +50,4 @@ Summary:
   Upgrade: 1 packages
   Downgrade: 8 packages
 ```
+3. 值得一提的就是这种安装方法我认为比在R内部`install.packages()`强太多了，用了micromamba都想吧conda弃了
