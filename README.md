@@ -10,7 +10,7 @@
 基本可以总结几种更改的方法：
 
 1. 在.**bashrc**文件添加 `export RSTUDIO_WHICH_R="/home/bio/micromamba/envs/R440/bin/R"`；
-2. 找到**`~/.config/rstudio/rstudio-prefs.json`**文件并添加`{"r-bin": "/home/bio/micromamba/envs/R440/bin/R"}`；
+2. 找到~/.**config/rstudio/rstudio-prefs.json**文件并添加`{"r-bin": "/home/bio/micromamba/envs/R440/bin/R"}`；
 3. 直接修改默认的R软链接`sudo ln -sf /home/bio/micromamba/envs/R440/bin/R /usr/local/bin/R`。**（不建议）**
 
 理论上更改完就生效了，但是在更改过程中发现了一个有趣的事情，如果在终端使用`rstudio`启动Rstudio，得到正确R版本，如果是点击桌面图标，发现还是原版本。
