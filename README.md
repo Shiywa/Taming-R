@@ -2,6 +2,7 @@
 记录一系列在使用R的过程中遇到的问题及解决方法
 
 - [更换在ubuntu系统上更换Rstudio初始化调用的R](#更改调用的R)
+- [使用micromamba在ubuntu系统上管理R环境](#micromamba管理R环境)
 
 ## 更改调用的R
 
@@ -29,3 +30,23 @@ MimeType=text/x-r-source;text/x-r;text/x-R;text/x-r-doc;text/x-r-sweave;text/x-q
 ```
 
 修改完以后`sudo update-desktop-database`,这样点击图标的时候也成功更换了**Rstudio**对应的**R**版本
+
+## micromamba管理R环境
+
+**micromamba**是一个非常好用的**R&Python**环境管理工具，是**conda**的替代品，而且解析环境速度**吊打**conda，而且在解决R**CRAN**来源包的依赖库上面有很强大的能力。
+micromamba的使用方法和conda几乎是完全一样的，并且可以对conda新建的env进行管理。
+
+```
+micromamba install -n R440 r-your_package r-base=4.4.1
+```
+
+以上一行命令可以解决所有的问题，但是仍有几个点需要注意：
+1. 以上命令仅可以用来安装**CRAN**来源的R包，这些R包的依赖库会顺利安装好，但是**bioManager&git_hub**来源的包是不能安装的；
+2. 在安装包的时候会提示你安装过程，一般来说可能包括**Install、Change、Upgrade以及Downgrade**，这里面有一个坑那就是**Downgrade**里面可能会回退你的**r-base**，只要在上面安装的命令里面设置好`r-base=x.x.x`,例如你现在使用的版本，就可以保证不会回退。
+```
+Summary:
+  Install: 1 packages
+  Change: 161 packages
+  Upgrade: 1 packages
+  Downgrade: 8 packages
+```
