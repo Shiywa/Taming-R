@@ -31,6 +31,8 @@ MimeType=text/x-r-source;text/x-r;text/x-R;text/x-r-doc;text/x-r-sweave;text/x-q
 
 修改完以后`sudo update-desktop-database`,这样点击图标的时候也成功更换了**Rstudio**对应的**R**版本
 
+-------------
+
 ## micromamba管理R环境
 
 **micromamba**是一个非常好用的**R&Python**环境管理工具，是**conda**的替代品，而且解析环境速度**吊打**conda，而且在解决R**CRAN**来源包的依赖库上面有很强大的能力。
