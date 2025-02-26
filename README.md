@@ -14,7 +14,7 @@
 3. 直接修改默认的R软链接`sudo ln -sf /home/bio/micromamba/envs/R440/bin/R /usr/local/bin/R`。**（不建议）**
 
 理论上更改完就生效了，但是在更改过程中发现了一个有趣的事情，如果在终端使用`rstudio`启动Rstudio，得到正确R版本，如果是点击桌面图标，发现还是原版本。
-最终发现是存在桌面应用的缓存问题，应该是类似于桌面应用也需要一个`source .bashrc`的操作用以更新，最终通过打开**/usr/share/applications/rstudio**.**desktop**这个文件，并修改了Exec
+最终发现是存在桌面应用的缓存问题，应该是类似于桌面应用也需要一个`source .bashrc`的操作用以更新，最终通过打开/**usr/share/applications/rstudio.desktop**这个文件，并修改了Exec
 
 ```
 [Desktop Entry]
