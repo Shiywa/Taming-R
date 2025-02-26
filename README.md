@@ -1,7 +1,7 @@
 # Taming-R
 记录一系列在使用R的过程中遇到的问题及解决方法
 
-- [更换在ubuntu系统上更换Rstudio初始化调用的R](#更改调用的R)
+- [在ubuntu系统上更换Rstudio初始化调用的R](#更改调用的R)
 - [使用micromamba在ubuntu系统上管理R环境](#micromamba管理R环境)
 
 -----------
@@ -54,4 +54,4 @@ Summary:
   Upgrade: 1 packages
   Downgrade: 8 packages
 ```
-3. 值得一提的就是这种安装方法我认为比在R内部`install.packages()`强太多了，用了micromamba都想吧conda弃了
+3. 值得一提的就是这种安装方法我认为比在R内部`install.packages()`强太多了，用了micromamba都想把conda弃了
